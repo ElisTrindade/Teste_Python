@@ -1,7 +1,7 @@
 nome = "Elis"
 
 print('Hello World!')
-profissao= "Engenheira eletricista e pesquisadora"
+profissao= "Engenheira eletricista, pesquisadora e professora"
 
 print(f"Este é o primeiro programa de {nome}")
 
