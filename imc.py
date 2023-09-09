@@ -1,4 +1,4 @@
-# Calculo do IMC 
+# Calculo do IMC ====
 resposta = input("'Olá, vamos calcular seu imc? (S/N)")
 
 print('Para isso você precisará responder algumas perguntas!')
