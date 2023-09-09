@@ -10,6 +10,7 @@ altura = float(input("Qual sua altura?"))
 # IMC = Peso ÷ (Altura × Altura)
 
 imc = peso // (altura*altura)
-print("Olá!", nome, ";")
-print("Sua idade é de ", idade, "anos.")
-print("Seu IMC é de", imc,";")
+
+print(f"Olá {nome};")
+print(f"Sua idade é de {idade} anos.")
+print(f"Seu IMC é de {imc};")
