@@ -1,5 +1,5 @@
 # Verificação de idade ===========================================
-print("Verificação de idade ======================")
+print("Verificação de idade ======================================")
 
 idade = float(input("Insira sua idade "))
 maior_idade = 18
