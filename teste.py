@@ -23,6 +23,7 @@ if (tipo_venda == "a prazo" and valor_venda > 800):
     parcelamento = int(input("Em quantas vezes deseja parcelar? (Até 18x)"))
     if (parcelamento > 18):
         print("Erro: insira a quantidade de parcela corretamente (Até 18x)")
+        sys.exit()
     elif (parcelamento <=10):
         print("Valor total da parcela sem juros")
         parcelamento_total = (valor_venda/parcelamento)
@@ -37,16 +38,12 @@ if (tipo_venda == "a prazo" and valor_venda > 800):
         elif(parcelamento == 16): juros = 10
         elif(parcelamento == 17): juros = 11.3
         elif(parcelamento == 18): juros = 12
-        elif(parcelamento > 18):
-            print("Erro: insira a quantidade de parcela corretamente (Até 18x)")
-    
-    print(f"Valor total acrescido de {juros}% de juros ao mês")
-    parcelamento_total = (valor_venda/parcelamento)
-    valor_mensal =(parcelamento_total + ((juros/100)*parcelamento_total))
-    print(f"Valor da parcela: {valor_mensal}")
-    print(f"Obrigada pela compra, volte sempre!")
-    
-        
+        print(f"Valor total acrescido de {juros}% de juros ao mês")
+        parcelamento_total = (valor_venda/parcelamento)
+        valor_mensal =(parcelamento_total + ((juros/100)*parcelamento_total))
+        print(f"Valor da parcela: {valor_mensal}")
+        print(f"Obrigada pela compra, volte sempre!")
+            
 elif (tipo_venda == "a prazo" and valor_venda <= 800):
     parcelamento = int(input("Em quantas vezes deseja parcelar? (Até 5x)"))
     if (parcelamento > 5):
