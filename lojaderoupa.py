@@ -80,6 +80,5 @@ elif (tipo_venda == "a prazo" and valor_venda <= 800):
         valor_mensal =(parcelamento_total)
         print(f"Valor da parcela: {valor_mensal}")
         print(f"Obrigada pela compra, volte sempre!")
-
 else:
     print("Informações não reconhecidas, siga as instruções corretamente")
