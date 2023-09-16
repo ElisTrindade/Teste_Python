@@ -1,10 +1,10 @@
-# Uma loja de roupas precisa de um programa que ajude a calcular o valor final da venda de produtos. 
-# Existem algumas regras que precisam ser respeitadas na venda de um produto
+print("========================== Loja de Roupas =============================== ")
 
 valor_venda = float(input("Insira o valor da venda "))
 tipo_venda = (input("Insira se a venda é a vista ou a prazo (a vista/a prazo)"))
 
-# Vendas a vista ================================================================ 
+## Vendas a vista ================================================================ 
+
 if (tipo_venda == "a vista" and valor_venda > 500):
     print("Você terá 15% de desconto")
     valor_final = (valor_venda - (valor_venda)*(15/100))
@@ -18,7 +18,8 @@ elif (tipo_venda == "a vista" and valor_venda <= 500):
     valor_final = (valor_venda - (valor_venda)*(10/100))
     print(f"Valor final será: {valor_final}")
 
-# Vendas a prazo ===============================================================
+## Vendas a prazo ===============================================================
+
 if (tipo_venda == "a prazo" and valor_venda > 800):
     parcelamento = int(input("Em quantas vezes deseja parcelar? (Até 18x)"))
     if (parcelamento <=10):
@@ -73,3 +74,5 @@ if (tipo_venda == "a prazo" and valor_venda <= 800):
     print(f"Valor da parcela: {valor_mensal}")
 else:
     print("Informações não reconhecidas, siga as instruções corretamente")
+
+print("Obrigada pela compra, volte sempre!")
