@@ -17,7 +17,9 @@ elif (operaçao == "*"):
    sum = num_1 * num_2
    print(f"{sum}")
 elif (operaçao == "/"):
-   sum = num_1 / num_2
-   print(f"{sum}")
-else:
-    print(f"erro")
+      if num_2 == 0:
+         print("Não é possivel dividir por zero")
+      else:
+         sum = num_1 / num_2
+         print(f"{sum}")
+
