@@ -12,7 +12,7 @@ elif (nota >= 70 and nota <= 79):
     print(f"Seu conceito é: C")
 elif (nota >= 60 and nota <= 69):
     print(f"Seu conceito é: D")
-elif (nota <= 60):
+elif (nota < 60):
     print(f"Seu conceito é: F")
 else:
-    print(f"Erro")
+    print(f"Erro: sua nota máxima é 100")
