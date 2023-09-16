@@ -1,7 +1,7 @@
 print("========================== Loja de Roupas =============================== ")
 
-valor_venda = float(input("Insira o valor da venda "))
-tipo_venda = (input("Insira se a venda é a vista ou a prazo (a vista/a prazo)"))
+valor_venda = float(input("Insira o valor da compra "))
+tipo_venda = (input("Insira se a compra é a vista ou a prazo (a vista/a prazo) "))
 
 ## Vendas a vista ================================================================ 
 
@@ -22,6 +22,8 @@ elif (tipo_venda == "a vista" and valor_venda <= 500):
 
 if (tipo_venda == "a prazo" and valor_venda > 800):
     parcelamento = int(input("Em quantas vezes deseja parcelar? (Até 18x)"))
+    if (parcelamento > 18):
+        print("Erro: insira a quantidade de parcela corretamente (Até 18x)")
     if (parcelamento <=10):
         print("Valor total da parcela sem juros")
         parcelamento_total = (valor_venda/parcelamento)
@@ -67,12 +69,17 @@ if (tipo_venda == "a prazo" and valor_venda > 800):
         parcelamento_total = (valor_venda/parcelamento)
         valor_mensal =(parcelamento_total + ((12/100)*parcelamento_total))
         print(f"Valor da parcela: {valor_mensal}")
-if (tipo_venda == "a prazo" and valor_venda <= 800):
-    parcelamento = float(input("Em quantas vezes deseja parcelar? (Até 5x)"))
-    parcelamento_total = (valor_venda/parcelamento)
-    valor_mensal =(parcelamento_total)
-    print(f"Valor da parcela: {valor_mensal}")
+    print(f"Obrigada pela compra, volte sempre!")
+    
+elif (tipo_venda == "a prazo" and valor_venda <= 800):
+    parcelamento = int(input("Em quantas vezes deseja parcelar? (Até 5x)"))
+    if (parcelamento > 5):
+        print("Erro: insira a quantidade de parcela corretamente (Até 5x)")
+    else:
+        parcelamento_total = (valor_venda/parcelamento)
+        valor_mensal =(parcelamento_total)
+        print(f"Valor da parcela: {valor_mensal}")
+        print(f"Obrigada pela compra, volte sempre!")
+
 else:
     print("Informações não reconhecidas, siga as instruções corretamente")
-
-print("Obrigada pela compra, volte sempre!")
