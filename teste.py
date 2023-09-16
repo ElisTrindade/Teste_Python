@@ -3,7 +3,6 @@ valor_venda = float(input("Insira o valor da compra "))
 tipo_venda = (input("Insira se a compra é a vista ou a prazo (a vista/a prazo) "))
 
 import sys
-#sys.exit()
 ## Vendas a vista ================================================================ 
 if (tipo_venda == "a vista" and valor_venda > 500 and valor_venda <= 1000):
     print("Você terá 15% de desconto")
@@ -18,7 +17,7 @@ elif (tipo_venda == "a vista" and valor_venda <= 500):
     valor_final = (valor_venda - (valor_venda)*(10/100))
     print(f"Valor final será: {valor_final}")
 
-## Vendas a prazo ===============================================================
+## Vendas a prazo ================================================================
 if (tipo_venda == "a prazo" and valor_venda > 800):
     parcelamento = int(input("Em quantas vezes deseja parcelar? (Até 18x)"))
     if (parcelamento > 18):
